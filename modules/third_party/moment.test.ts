@@ -1,4 +1,4 @@
-import moment from "https://deno.land/x/momentjs@2.29.1-deno/mod.ts";
+import { moment } from "https://deno.land/x/deno_ts_moment@0.0.3/mod.ts";
 import { delay } from "../std/mod.ts";
 
 const now = moment();
