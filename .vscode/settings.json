@@ -1,0 +1,17 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+          "match": "\\.ts$",
+          "cmd": "deno fmt ${file}"
+      },
+      {
+          "match": "\\.js$",
+          "cmd": "deno fmt ${file}"
+      },
+    ]
+  }
+}
