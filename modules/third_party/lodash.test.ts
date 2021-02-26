@@ -1,4 +1,4 @@
-// @deno-types="./lodash.d.ts"
-import lodash from "https://cdn.skypack.dev/lodash-es@4.17.21";
+import { lodash } from "https://deno.land/x/deno_ts_lodash/mod.ts";
 
 console.log(lodash.random(0, 10));
+console.log(lodash.shuffle([1, 2, 3, 4, 5]));
