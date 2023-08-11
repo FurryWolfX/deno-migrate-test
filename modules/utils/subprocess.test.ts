@@ -1,10 +1,10 @@
-// create subprocess
-const p = Deno.run({
-  cmd: ["ls", "./"],
-  stdout: "inherit",
-  stderr: "inherit",
+const command = new Deno.Command(Deno.execPath(), {
+  args: [
+    "eval",
+    "console.log('hello'); console.error('world')",
+  ],
 });
-
-// await its completion
-const res = await p.status();
-console.log(res);
+const { code, stdout, stderr } = await command.output();
+console.assert(code === 0);
+console.assert("hello\n" === new TextDecoder().decode(stdout));
+console.assert("world\n" === new TextDecoder().decode(stderr));

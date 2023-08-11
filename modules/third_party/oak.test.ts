@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak@v6.5.0/mod.ts";
+import { Application, Router } from "https://deno.land/x/oak@v12.6.0/mod.ts";
 
 const books = new Map<string, Record<string, string>>();
 books.set("1", {
@@ -33,4 +33,4 @@ app.addEventListener("listen", ({ hostname, port, secure }) => {
   );
 });
 
-await app.listen({ port: 8000 });
+// await app.listen({ port: 8000 });
